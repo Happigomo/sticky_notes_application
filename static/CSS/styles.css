@@ -1,0 +1,3 @@
+.card { border-radius: 10px; }
+.card-body { min-height: 120px; }
+.note-sticky { background: linear-gradient(135deg, #fff9c4, #fff59d); }

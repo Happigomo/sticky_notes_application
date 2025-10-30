@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{% if object %}Edit Note{% else %}New Note{% endif %}</h2>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button class="btn btn-primary" type="submit">Save</button>
+<a href="{% url 'sticky_notes:note-list' %}" class="btn btn-link">Cancel</a>
+</form>
+{% endblock %}

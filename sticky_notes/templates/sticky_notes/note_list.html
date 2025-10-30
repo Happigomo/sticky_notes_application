@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Notes{% endblock %}
+{% block content %}
+<div class="row">
+{% for note in notes %}
+<div class="col-md-4 mb-3">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">{{ note.title }}</h5>
+<p class="card-text">{{ note.content|truncatechars:100 }}</p>
+<a href="{% url 'sticky_notes:note-detail' note.pk %}" class="btn btn-sm btn-outline-primary">Open</a>
+</div>
+</div>
+</div>
+{% empty %}
+<p>No notes yet. <a href="{% url 'sticky_notes:note-create' %}">Create one</a>.</p>
+{% endfor %}
+</div>
+{% endblock %}
