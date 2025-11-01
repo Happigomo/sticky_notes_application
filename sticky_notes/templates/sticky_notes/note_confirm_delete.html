@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>Confirm delete</h2>
-<p>Delete "{{ object.title }}"?</p>
-<form method="post">{% csrf_token %}
-<button class="btn btn-danger" type="submit">Yes, delete</button>
-<a href="{% url 'sticky_notes:note-detail' object.pk %}" class="btn btn-link">Cancel</a>
-</form>
-{% endblock %}

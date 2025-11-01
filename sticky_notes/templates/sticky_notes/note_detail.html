@@ -1,8 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>{{ object.title }}</h2>
-<p>{{ object.content|linebreaks }}</p>
-<a href="{% url 'sticky_notes:note-update' object.pk %}" class="btn btn-secondary">Edit</a>
-<a href="{% url 'sticky_notes:note-delete' object.pk %}" class="btn btn-danger">Delete</a>
-<a href="{% url 'sticky_notes:note-list' %}" class="btn btn-link">Back</a>
-{% endblock %}
